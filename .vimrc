@@ -1,3 +1,6 @@
+" reload file with :so %
+
+
 syntax on
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -18,6 +21,10 @@ set nowrap
 set mouse=a
 let mapleader = "\\"
 
+" :w same as :W
+command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
+
+
 " Vundle Setup
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -33,6 +40,9 @@ Plugin 'airblade/vim-gitgutter'
 
 "Git wrapper so awesome, it should be illegal 
 Plugin 'tpope/vim-fugitive'
+
+"A minimal replacement for fugitive's Gstatus command
+Bundle 'alexdavid/vim-min-git-status'
 
 " command-T plug-in provides an extremely fast, intuitive mechanism for opening files and buffers
 Plugin 'git://git.wincent.com/command-t.git'
@@ -101,6 +111,9 @@ Plugin 'w0rp/ale'
   nmap <silent> <C-k> <Plug>(ale_previous_wrap)
   nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
+" A Vim plugin that always highlights the enclosing html/xml tags
+"Plugin 'Valloric/MatchTagAlways' 
+  
 " vim plugin to list, select and switch between buffers. 
 Plugin 'jeetsukumaran/vim-buffergator'
 
@@ -126,8 +139,10 @@ Plugin 'jeetsukumaran/vim-buffergator'
   nmap <leader>T :enew<cr>
   nmap <leader>bq :bp <BAR> bd #<cr>
 
+"Search spotify in Vim and play songs. 
+":Plugin 'takac/vim-spotifysearch'
 
-
+Plugin 'uguu-org/vim-matrix-screensaver'
 
 filetype plugin indent on    " required
 
