@@ -96,13 +96,13 @@ set +x
 printf "yabai: configuration loaded...\\n"
 
 
-yabai -m space 1 --label "1 :main"
-yabai -m space 2 --label "2: personal" 
-yabai -m space 3 --label "3: dev"
-yabai -m space 4 --label "4: notes"
-yabai -m space 5 --label "5: cal"
-yabai -m space 6 --label "6: music"
-yabai -m space 7 --label "7: mail"
-yabai -m space 8 --label "8: slack"
-yabai -m space 9 --label "9: todo"
+yabai -m space 1 --label "1: Main"
+yabai -m space 2 --label "2: Personal"
+yabai -m space 3 --label "3: Dev 1"
+yabai -m space 4 --label "4: Dev 2"
+yabai -m space 5 --label "5: Misc"
+yabai -m space 6 --label "6: Notes"
+yabai -m space 7 --label "7: Slack"
+yabai -m space 8 --label "8: Music"
+yabai -m space 9 --label "9: Zoom"
 
