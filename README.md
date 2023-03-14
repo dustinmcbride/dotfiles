@@ -26,6 +26,9 @@ $ brew services start yabai
 "A powerful and stable keyboard customizer for macOS."
 
 https://karabiner-elements.pqrs.org
+ 
+### Install Stackline
+https://github.com/AdamWagner/stackline
 
 
 ### Mac OS
@@ -39,6 +42,7 @@ Reassign some system keys
 **Settings >> Desktop Doc**
 Automatically rearrange Spaces based on most recent use - OFF
 
+	Global Key
 
 ### Ubersicht + Simple Bar
 Übersicht lets you run system commands and display their output on your desktop in little containers, called widgets. 

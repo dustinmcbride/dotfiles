@@ -31,12 +31,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_shift",
-                                        "modifiers": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
+                                        "key_code": "fn"
                                     }
                                 ],
                                 "to_if_alone": [
@@ -55,12 +50,7 @@
                                 "from": {
                                     "key_code": "slash",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option",
-                                            "left_shift"
-                                        ],
+                                        "mandatory": "fn", 
                                         "optional": [
                                             "caps_lock"
                                         ]
@@ -68,7 +58,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "osascript '/Users/dustinmcbride/dotfiles/misc/Yabai Help.scpt'"
+                                        "shell_command": "osascript '/Users/dustinmcbride/dotfiles/help/Yabai Help.scpt'"
                                     }
                                 ],
                                 "type": "basic"
@@ -77,12 +67,7 @@
                                 "from": {
                                     "key_code": "m",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option",
-                                            "left_shift"
-                                        ],
+                                        "mandatory": "fn",
                                         "optional": [
                                             "caps_lock"
                                         ]
@@ -99,12 +84,7 @@
                                 "from": {
                                     "key_code": "s",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option",
-                                            "left_shift"
-                                        ],
+                                        "mandatory": "fn",
                                         "optional": [
                                             "caps_lock"
                                         ]
@@ -121,12 +101,7 @@
                                 "from": {
                                     "key_code": "v",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option",
-                                            "left_shift"
-                                        ],
+                                        "mandatory": "fn",
                                         "optional": [
                                             "caps_lock"
                                         ]
@@ -143,12 +118,7 @@
                                 "from": {
                                     "key_code": "o",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option",
-                                            "left_shift"
-                                        ],
+                                        "mandatory": "fn",
                                         "optional": [
                                             "caps_lock"
                                         ]
@@ -165,12 +135,7 @@
                                 "from": {
                                     "key_code": "b",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option",
-                                            "left_shift"
-                                        ],
+                                        "mandatory": "fn",
                                         "optional": [
                                             "caps_lock"
                                         ]
@@ -187,12 +152,7 @@
                                 "from": {
                                     "key_code": "t",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option",
-                                            "left_shift"
-                                        ],
+                                        "mandatory": "fn",
                                         "optional": [
                                             "caps_lock"
                                         ]
@@ -209,12 +169,7 @@
                                 "from": {
                                     "key_code": "c",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option",
-                                            "left_shift"
-                                        ],
+                                        "mandatory": "fn",
                                         "optional": [
                                             "caps_lock"
                                         ]
@@ -231,12 +186,7 @@
                                 "from": {
                                     "key_code": "z",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option",
-                                            "left_shift"
-                                        ],
+                                        "mandatory": "fn",
                                         "optional": [
                                             "caps_lock"
                                         ]

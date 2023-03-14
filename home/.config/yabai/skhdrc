@@ -1,6 +1,9 @@
 # opens iTerm2
 alt - return : "${HOME}"/.config/yabai/scripts/open_iterm2.sh
 
+# Todo
+# Move app shortcuts here from karabiner
+
 # Show system statistics
 fn + lalt - 1 : "${HOME}"/.config/yabai/scripts/show_cpu.sh
 fn + lalt - 2 : "${HOME}"/.config/yabai/scripts/show_mem.sh
@@ -8,34 +11,45 @@ fn + lalt - 3 : "${HOME}"/.config/yabai/scripts/show_bat.sh
 fn + lalt - 4 : "${HOME}"/.config/yabai/scripts/show_disk.sh
 fn + lalt - 5 : "${HOME}"/.config/yabai/scripts/show_song.sh
 
-# Navigation
-hyper - h : yabai -m window --focus west
-hyper - j : yabai -m window --focus south || yabai -m window --focus stack.prev
-hyper - k : yabai -m window --focus north || yabai -m window --focus stack.next 
-hyper - l : yabai -m window --focus east
 
-hyper - z : yabai -m space --layout $(yabai -m query --spaces --space | jq -r 'if .type == "bsp" then "float" elif .type == "float" then "stack" else "bsp" end')
+# Stack Current to NESW
+fn + lctrl - h : "${HOME}"/.config/yabai/scripts/float.sh west
+fn + lctrl - j : "${HOME}"/.config/yabai/scripts/float.sh north
+fn + lctrl - k : "${HOME}"/.config/yabai/scripts/float.sh south
+fn + lctrl - l : "${HOME}"/.config/yabai/scripts/float.sh east
+
+
+# Navigation
+fn - h : yabai -m window --focus west
+fn - j : yabai -m window --focus south 
+fn - k : yabai -m window --focus north  
+fn - l : yabai -m window --focus east
+
+fn - u : yabai -m window --focus stack.next
+fn - i : yabai -m window --focus stack.prev
+
+fn - z : yabai -m space --layout $(yabai -m query --spaces --space | jq -r 'if .type == "bsp" then "float" elif .type == "float" then "stack" else "bsp" end')
 
 # Moving windows
-shift + alt - h : yabai -m window --warp west
-shift + alt - j : yabai -m window --warp south
-shift + alt - k : yabai -m window --warp north
-shift + alt - l : yabai -m window --warp east
+fn + cmd - h : yabai -m window --warp west
+fn + cmd - j : yabai -m window --warp south
+fn + cmd - k : yabai -m window --warp north
+fn + cmd - l : yabai -m window --warp east
 
 # Move focus container to workspace
-shift + alt - m : yabai -m window --space last; yabai -m space --focus last
-shift + alt - p : yabai -m window --space prev; yabai -m space --focus prev
-shift + alt - n : yabai -m window --space next; yabai -m space --focus next
-shift + alt - 1 : yabai -m window --space 1; yabai -m space --focus 1
-shift + alt - 2 : yabai -m window --space 2; yabai -m space --focus 2
-shift + alt - 3 : yabai -m window --space 3; yabai -m space --focus 3
-shift + alt - 4 : yabai -m window --space 4; yabai -m space --focus 4
-shift + alt - 5 : yabai -m window --space 5; yabai -m space --focus 5
-shift + alt - 6 : yabai -m window --space 6; yabai -m space --focus 6
-shift + alt - 7 : yabai -m window --space 7; yabai -m space --focus 7
-shift + alt - 8 : yabai -m window --space 8; yabai -m space --focus 8
-shift + alt - 9 : yabai -m window --space 9; yabai -m space --focus 9
-shift + alt - 0 : yabai -m window --space 0; yabai -m space --focus 0
+fn + cmd - m : yabai -m window --space last; yabai -m space --focus last
+fn + cmd - p : yabai -m window --space prev; yabai -m space --focus prev
+fn + cmd - n : yabai -m window --space next; yabai -m space --focus next
+fn + cmd - 1 : yabai -m window --space 1; yabai -m space --focus 1
+fn + cmd - 2 : yabai -m window --space 2; yabai -m space --focus 2
+fn + cmd - 3 : yabai -m window --space 3; yabai -m space --focus 3
+fn + cmd - 4 : yabai -m window --space 4; yabai -m space --focus 4
+fn + cmd - 5 : yabai -m window --space 5; yabai -m space --focus 5
+fn + cmd - 6 : yabai -m window --space 6; yabai -m space --focus 6
+fn + cmd - 7 : yabai -m window --space 7; yabai -m space --focus 7
+fn + cmd - 8 : yabai -m window --space 8; yabai -m space --focus 8
+fn + cmd - 9 : yabai -m window --space 9; yabai -m space --focus 9
+fn + cmd - 0 : yabai -m window --space 0; yabai -m space --focus 0
 
 # Resize windows
 lctrl + alt - h : yabai -m window --resize left:-50:0; \
@@ -55,11 +69,11 @@ lctrl + alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 
 # Rotate windows clockwise and anticlockwise
 alt - r         : yabai -m space --rotate 270
-shift + alt - r : yabai -m space --rotate 90
+fn + cmd - r : yabai -m space --rotate 90
 
 # Rotate on X and Y Axis
-shift + alt - x : yabai -m space --mirror x-axis
-shift + alt - y : yabai -m space --mirror y-axis
+fn + cmd - x : yabai -m space --mirror x-axis
+fn + cmd - y : yabai -m space --mirror y-axis
 
 # Set insertion point for focused container
 shift + lctrl + alt - h : yabai -m window --insert west
@@ -68,7 +82,7 @@ shift + lctrl + alt - k : yabai -m window --insert north
 shift + lctrl + alt - l : yabai -m window --insert east
 
 # Float / Unfloat window
-shift + alt - space : \
+fn + cmd - space : \
     yabai -m window --toggle float; \
     yabai -m window --toggle border
 
@@ -80,4 +94,4 @@ shift + lctrl + alt - r : \
 
 # Make window native fullscreen
 alt - f         : yabai -m window --toggle zoom-fullscreen
-shift + alt - f : yabai -m window --toggle native-fullscreen
+fn + cmd - f : yabai -m window --toggle native-fullscreen
