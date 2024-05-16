@@ -21,8 +21,8 @@ fn + lctrl - l : "${HOME}"/.config/yabai/scripts/float.sh east
 
 # Navigation
 fn - h : yabai -m window --focus west
-fn - j : yabai -m window --focus south 
-fn - k : yabai -m window --focus north  
+fn - j : yabai -m window --focus south
+fn - k : yabai -m window --focus north
 fn - l : yabai -m window --focus east
 
 fn - u : yabai -m window --focus stack.next
@@ -93,5 +93,5 @@ shift + lctrl + alt - r : \
     launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
 # Make window native fullscreen
-alt - f         : yabai -m window --toggle zoom-fullscreen
+fn - f: yabai -m window --toggle zoom-fullscreen
 fn + cmd - f : yabai -m window --toggle native-fullscreen

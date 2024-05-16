@@ -26,7 +26,7 @@ $ brew services start yabai
 "A powerful and stable keyboard customizer for macOS."
 
 https://karabiner-elements.pqrs.org
- 
+
 ### Install Stackline
 https://github.com/AdamWagner/stackline
 
@@ -45,11 +45,14 @@ Automatically rearrange Spaces based on most recent use - OFF
 	Global Key
 
 ### Ubersicht + Simple Bar
-Übersicht lets you run system commands and display their output on your desktop in little containers, called widgets. 
+Übersicht lets you run system commands and display their output on your desktop in little containers, called widgets.
 
 #### Install
 https://tracesof.net/uebersicht/
 https://github.com/Jean-Tinland/simple-bar
+
+### Install JQ
+```brew install jq```
 
 #### Settings
 `cmd + ,`

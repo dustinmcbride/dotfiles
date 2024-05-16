@@ -2,7 +2,6 @@
 // const fs = require('fs')
 import path from 'path'
 import os from "os"
-import { cp } from 'node:fs/promises';
 import fs from 'fs'
 
 const userHomeDir = os.homedir();
@@ -24,7 +23,7 @@ if (!fs.existsSync(homeConfigDir)){
   fs.mkdirSync(homeConfigDir);
 }
 
-const alreadyExistsInHomeDir = tracekdConfigs.filter(p =>   
+const alreadyExistsInHomeDir = tracekdConfigs.filter(p =>
   fs.existsSync(path.join(userHomeDir, p))
 )
 
