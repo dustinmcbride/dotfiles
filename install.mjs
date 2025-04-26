@@ -8,6 +8,7 @@ const userHomeDir = os.homedir();
 
 const trackedConfigs = [
   '.config/karabiner',
+  '.config/nvim'
 ]
 
 const homeConfigDir = path.join(userHomeDir, '.config')
